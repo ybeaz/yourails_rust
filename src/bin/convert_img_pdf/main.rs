@@ -9,7 +9,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .nth(2)
         .unwrap_or_else(|| format!("{input}.pdf"));
 
-    convert_image_to_pdf(&input, &output)?;
+    convert_image_to_pdf(&input, &output, 5.0, 1_000_000)?;
 
     println!("Created: {output}");
 

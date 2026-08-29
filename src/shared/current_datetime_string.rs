@@ -8,6 +8,6 @@ use chrono::Local;
 // %S   → second
 // %3f  → milliseconds
 pub fn current_datetime_string() -> String {
-    Local::now().format("%Y-%m-%d-%H-%M-%S-%3f").to_string()
+    Local::now().format("%Y-%m-%d-%H-%M-%S").to_string()
     // Utc::now().format("%Y-%m-%d-%H-%M-%S").to_string()
 }
