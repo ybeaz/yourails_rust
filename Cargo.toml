@@ -3,6 +3,10 @@ name = "yourails_rust"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "toPdf"
+path = "src/bin/convert_img_pdf_dir/main.rs"
+
 [dependencies]
 chrono = "0.4.45" # cargo add chrono
 image = "0.25.10"

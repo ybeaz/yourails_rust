@@ -1,3 +1,9 @@
+pub mod combine_pdfs;
 pub mod convert_image_to_pdf;
+pub mod convert_imgs_paths_to_1pdf;
 pub mod current_datetime_string;
+pub mod delete_files;
+pub mod get_file_info;
+pub mod image_sizes_standard;
 pub mod read_directory_files;
+pub mod vecs2_from_vec_paths;

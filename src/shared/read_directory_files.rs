@@ -11,7 +11,7 @@ pub fn read_directory_files(
         return Err(format!("Not a directory: {input}").into());
     }
 
-    let mut files = Vec::new();
+    let mut paths_files_abs = Vec::new();
 
     for entry in fs::read_dir(directory)? {
         let entry = entry?;
@@ -32,9 +32,11 @@ pub fn read_directory_files(
             .iter()
             .any(|ext| ext.eq_ignore_ascii_case(extension))
         {
-            files.push(path.to_string_lossy().into_owned());
+            paths_files_abs.push(path.to_string_lossy().into_owned());
         }
     }
 
-    Ok(files)
+    paths_files_abs.sort();
+
+    Ok(paths_files_abs)
 }
